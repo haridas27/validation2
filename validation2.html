@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner{
+            background-color: darkgray;
+        }
+        form{
+            text-align: center;
+        }
+        .inputbox {
+            position: relative;
+            width: 196px;
+        }
+        .head{
+            text-align: center;
+            color: crimson;
+        }
+        .inputbox input {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            color: #23242a;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            z-index: 10;
+        }
+
+        /* .inputbox span {
+            position: absolute;
+            left: 0;
+            padding: 20px 10px 10px;
+            font-size: 1em;
+            color: #8f8f8f;
+            letter-spacing: 00.05em;
+            transition: 0.5s;
+            pointer-events: none;
+        } */
+
+        .inputbox input:valid~span,
+        .inputbox input:focus~span {
+            color: #45f3ff;
+            transform: translateX(-10px) translateY(-34px);
+            font-size: 0, 75em;
+        }
+
+        .inputbox i {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #45f3ff;
+            border-radius: 4px;
+            transition: 0.5s;
+            pointer-events: none;
+            z-index: 9;
+        }
+        .inputbox input:valid~i,
+        .inputbox input:focus~i {
+            height: 44px;
+        }
+        input[type=submit]:hover{
+                background-color: #45f3ff;
+                border: none;
+        }   
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="conteiner">
+            <fieldset> 
+                <form>
+                    <div class="head">
+                        <h1>Login Page</h1>
+                    </div>
+                    <div class="inputbox">
+                        username: <input  type="text">
+                        <!-- <span>Username</span> -->
+                        <i></i>
+                    </div>
+                    <div class="inputbox">
+                        password: <input  type="password">
+                        <!-- <span>Username</span> -->
+                        <i></i>
+                    </div>
+                    <div class="inputbox">
+                        Email: <input  type="Email">
+                        <!-- <span>Username</span> -->
+                        <i></i>
+                    </div>
+                    <div class="inputbox">
+                        phonr-no: <input  type="tel">
+                        <!-- <span>Username</span> -->
+                        <i></i>
+                    </div>
+                    <input type="submit" value="submit">
+                </form>
+            </fieldset>
+        </div>
+    </section>
+
+</body>
+
+</html>
